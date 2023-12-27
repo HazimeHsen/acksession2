@@ -1,12 +1,15 @@
 "use client";
+import useAnimationHook from "@/app/hooks/useAnimation";
 import React, { useState } from "react";
-
+import Heading from "../Heading";
+import { motion } from "framer-motion";
 const Faq = () => {
   const [selectedQuestion, setSelectedQuestion] = useState(null);
 
   const toggleAnswer = (index) => {
     setSelectedQuestion((prev) => (prev === index ? null : index));
   };
+  const { controls: controls1, ref: ref1 } = useAnimationHook();
 
   const faqData = [
     {
@@ -31,14 +34,25 @@ const Faq = () => {
   return (
     <section className="flex items-center bg-gray-50 lg:h-screen">
       <div className="justify-center flex-1 max-w-6xl px-4 py-4 mx-auto lg:py-6 md:px-6">
-        <h2 className="pb-2 text-primary text-pretty text-4xl mb-5 font-bold text-center text-gray-800 md:text-5xl">
-          Software Development FAQs
-        </h2>
+        <Heading>
+          <h2 className="pb-2 text-pretty text-4xl mb-10 font-bold text-center text-gray-800 md:text-5xl">
+            Software Development{" "}
+            <span className="text-primary underline">FAQs</span>
+          </h2>
+        </Heading>
         <div className="flex flex-wrap items-center justify-between mb-12">
           <div className="w-full mb-4 lg:w-1/2 lg:mb-0">
             <div className="lg:max-w-xl">
               {faqData.map((faq, index) => (
-                <div
+                <motion.div
+                  ref={ref1}
+                  initial="hidden"
+                  animate={controls1}
+                  variants={{
+                    visible: { opacity: 1, y: 0 },
+                    hidden: { opacity: 0, y: 50 },
+                  }}
+                  transition={{ duration: 0.3 }}
                   key={index}
                   className={`flex flex-col justify-between w-full px-6 py-4 mb-4 bg-gray-100 border rounded-3xl cursor-pointer`}
                   onClick={() => toggleAnswer(index)}>
@@ -64,7 +78,7 @@ const Faq = () => {
                     }`}>
                     {faq.answer}
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

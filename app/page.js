@@ -1,4 +1,6 @@
+"use client";
 import Capabilities from "./Components/Capabilities";
+import ClientOnly from "./Components/ClientOnly";
 import Faq from "./Components/FAQ/Faq";
 import Hero from "./Components/Hero";
 import History from "./Components/History";
@@ -44,21 +46,21 @@ const capabilities = [
     desc: "We excel at human-centered design through extensive experience in design to ensure that every digital product your brand produces looks and feels impeccable.",
     image: "/Capabilities/3.webp",
   },
-  {
-    title: "SEO & Digital Marketing",
-    desc: "Our Digital Marketing Intellectuals helps global enterprises and businesses to reach right audience, increase sales, build fanbase, and dominate the competition through creative campaign, personalized content and 360-degree online reputation management.",
-    image: "/Capabilities/4.webp",
-  },
-  {
-    title: "Hire Dedicated Developers",
-    desc: "Hire expert software developers from our talent pool at competitive prices with flexible hiring options. Our dedicated developers have expertise and experience to provide end-to-end solutions to startups and enterprises for web and mobile applications development.",
-    image: "/Capabilities/5.webp",
-  },
-  {
-    title: "Artificial Intelligence",
-    desc: "Unlock the potential of Artificial Intelligence with our comprehensive AI integration services. From machine learning algorithms to natural language processing, we harness cutting-edge AI technologies to optimize processes, enhance decision-making, and drive innovation for your business.",
-    image: "/Capabilities/6.png",
-  },
+  // {
+  //   title: "SEO & Digital Marketing",
+  //   desc: "Our Digital Marketing Intellectuals helps global enterprises and businesses to reach right audience, increase sales, build fanbase, and dominate the competition through creative campaign, personalized content and 360-degree online reputation management.",
+  //   image: "/Capabilities/4.webp",
+  // },
+  // {
+  //   title: "Hire Dedicated Developers",
+  //   desc: "Hire expert software developers from our talent pool at competitive prices with flexible hiring options. Our dedicated developers have expertise and experience to provide end-to-end solutions to startups and enterprises for web and mobile applications development.",
+  //   image: "/Capabilities/5.webp",
+  // },
+  // {
+  //   title: "Artificial Intelligence",
+  //   desc: "Unlock the potential of Artificial Intelligence with our comprehensive AI integration services. From machine learning algorithms to natural language processing, we harness cutting-edge AI technologies to optimize processes, enhance decision-making, and drive innovation for your business.",
+  //   image: "/Capabilities/6.png",
+  // },
 ];
 
 const work = [
@@ -81,17 +83,17 @@ const work = [
 
 export default function Home() {
   return (
-    <>
+    <ClientOnly>
       <Hero />
-      <Slideshow
+      {/* <Slideshow
         className="max-w-[500px] max-h-[300px] w-full h-full "
         images={images}
-      />
+      /> */}
       <History />
-      <WorkedWith logos={logos} />
       <Capabilities capabilities={capabilities} />
+      {/* <WorkedWith logos={logos} /> */}
       <Works work={work} />
       <Faq />
-    </>
+    </ClientOnly>
   );
 }

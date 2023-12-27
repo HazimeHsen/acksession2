@@ -1,12 +1,19 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { FaBars, FaTimes, FaAngleDown } from "react-icons/fa";
-
+import useAnimationHook from "@/app/hooks/useAnimation";
+import { motion, useAnimation, useInView } from "framer-motion";
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showDropdown, setShowDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const controls = useAnimation();
+  const ref = useRef(null);
+
+  useEffect(() => {
+    controls.start("visible");
+  }, [controls]);
 
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
@@ -64,14 +71,23 @@ const Navbar = () => {
       }`}>
       <nav className="p-4 md:px-6 lg:px-10">
         <div className="mx-auto flex items-center justify-between">
-          <div className="text-white font-bold text-lg">
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: -50 },
+            }}
+            transition={{ duration: 0.3, delay: 1 }}
+            className="text-white font-bold text-lg">
             <Image
               width={150}
               height={70}
               src="/acksession_logo.png"
               alt="Logo"
             />
-          </div>
+          </motion.div>
           <div className="space-x-4 hidden lg:flex">
             {links.map((link, index) => (
               <div
@@ -104,13 +120,22 @@ const Navbar = () => {
               </div>
             ))}
           </div>
-          <div className="lg:hidden mt-4">
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: 50 },
+            }}
+            transition={{ duration: 0.3, delay: 1 }}
+            className="lg:hidden mt-4">
             <button
               onClick={toggleSidebar}
               className="text-black text-2xl focus:outline-none">
               {showSidebar ? <FaTimes size={25} /> : <FaBars size={25} />}
             </button>
-          </div>
+          </motion.div>
         </div>
       </nav>
 

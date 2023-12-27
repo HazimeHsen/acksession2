@@ -6,7 +6,7 @@ import Slideshow from "../Slideshow/Slideshow";
 const WorkedWith = ({ logos }) => {
   return (
     <div className="bg-primary text-white">
-      <div className="px-4 md:px-8 pb-10">
+      <div className="px-4 md:px-8 py-10">
         <div className="pb-10">
           <div className="">
             <div className="text-3xl md:text-4xl text-center font-bold ">
