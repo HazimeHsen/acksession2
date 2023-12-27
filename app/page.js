@@ -1,4 +1,5 @@
 import Capabilities from "./Components/Capabilities";
+import Faq from "./Components/FAQ/Faq";
 import Hero from "./Components/Hero";
 import History from "./Components/History";
 import Slideshow from "./Components/Slideshow/Slideshow";
@@ -90,6 +91,7 @@ export default function Home() {
       <WorkedWith logos={logos} />
       <Capabilities capabilities={capabilities} />
       <Works work={work} />
+      <Faq />
     </>
   );
 }
