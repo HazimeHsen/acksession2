@@ -33,7 +33,7 @@ const History = () => {
       <div className="px-4 md:px-8 py-14">
         <div className="flex lg:flex-row flex-col border-b border-gray/40 pb-10">
           <div className="lg:w-1/2">
-            <div className="text-5xl font-bold ">
+            <div className="text-4xl md:text-5xl font-bold ">
               <span className="text-third mr-2">Trusted</span>
               by more than 140
               <span className="text-third mx-2">businesses</span>
