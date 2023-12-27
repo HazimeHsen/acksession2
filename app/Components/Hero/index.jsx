@@ -19,7 +19,7 @@ const Hero = () => {
           <Button text="Get free quote" Icon={FaArrowRight} />
         </div>
         <div className="w-full">
-          <Button text="Get free quote" Icon={FaArrowRight} outline />
+          <Button text="Join Us" outline />
         </div>
       </div>
     </div>

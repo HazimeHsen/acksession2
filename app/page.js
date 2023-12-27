@@ -3,6 +3,7 @@ import Hero from "./Components/Hero";
 import History from "./Components/History";
 import Slideshow from "./Components/Slideshow/Slideshow";
 import WorkedWith from "./Components/WorkedWith";
+import Works from "./Components/Works";
 
 const images = [
   "/slideshow/slide-1.webp",
@@ -59,6 +60,24 @@ const capabilities = [
   },
 ];
 
+const work = [
+  {
+    title: "Sundae",
+    desc: "Sundae is revolutionising the way homeowners sell houses that need repairs. Every day our team of Market Experts help homeowners sell their house in poor condition fast and for the highest off-market price possible.",
+    image: "/Works/1.webp",
+  },
+  {
+    title: "MCM",
+    desc: "MCM Provides Nationwide Delivery – Soils, Aggregates & Waste Management Marketing website of famous Soil and Aggregates seller across United kingdom.",
+    image: "/Works/2.webp",
+  },
+  {
+    title: "Hapa Website",
+    desc: "Hapa Cloud is the hospitality industry’s fastest-growing technology partner, serving a global customer base of thousands of properties across 157 countries.",
+    image: "/Works/3.webp",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -70,6 +89,7 @@ export default function Home() {
       <History />
       <WorkedWith logos={logos} />
       <Capabilities capabilities={capabilities} />
+      <Works work={work} />
     </>
   );
 }
