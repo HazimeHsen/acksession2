@@ -33,20 +33,10 @@ const Navbar = () => {
     {
       text: "Services",
       url: "#",
-      dropdown: [
-        { text: "Service 1", url: "#" },
-        { text: "Service 2", url: "#" },
-        { text: "Service 3", url: "#" },
-      ],
     },
     {
       text: "prices",
       url: "#",
-      dropdown: [
-        { text: "Service 1", url: "#" },
-        { text: "Service 2", url: "#" },
-        { text: "Service 3", url: "#" },
-      ],
     },
     { text: "Contact", url: "#" },
   ];
@@ -88,7 +78,15 @@ const Navbar = () => {
               alt="Logo"
             />
           </motion.div>
-          <div className="space-x-4 hidden lg:flex">
+          <motion.div
+            initial="hidden"
+            animate={controls}
+            variants={{
+              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: -50 },
+            }}
+            transition={{ duration: 0.3, delay: 1 }}
+            className="space-x-4 hidden lg:flex">
             {links.map((link, index) => (
               <div
                 key={index}
@@ -119,7 +117,7 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-          </div>
+          </motion.div>
           <motion.div
             ref={ref}
             initial="hidden"
