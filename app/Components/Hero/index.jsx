@@ -19,7 +19,7 @@ const Hero = () => {
           visible: { opacity: 1, x: 0 },
           hidden: { opacity: 0, x: -50 },
         }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 1 }}
         className="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-bold text-primary capitalize max-w-4xl">
         Leading <span className="text-secondary">web & mobile</span> application
         development company
