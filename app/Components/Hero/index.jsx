@@ -1,9 +1,8 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import Button from "../Button";
 import { FaArrowRight } from "react-icons/fa";
-import useAnimationHook from "@/app/hooks/useAnimation";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 const Hero = () => {
   const controls = useAnimation();
 
