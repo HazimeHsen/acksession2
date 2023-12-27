@@ -82,8 +82,8 @@ const Navbar = () => {
             initial="hidden"
             animate={controls}
             variants={{
-              visible: { opacity: 1, y: 0 },
-              hidden: { opacity: 0, y: -50 },
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: 50 },
             }}
             transition={{ duration: 0.3, delay: 1 }}
             className="space-x-4 hidden lg:flex">
