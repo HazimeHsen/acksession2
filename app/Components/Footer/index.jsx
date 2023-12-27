@@ -1,7 +1,51 @@
+import Image from "next/image";
 import React from "react";
+import {
+  FaGithub,
+  FaTwitter,
+  FaLinkedin,
+  FaFacebook,
+  FaInstagram,
+} from "react-icons/fa";
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <footer className="bg-primary text-white p-4 lg:p-8">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        {/* Logo */}
+        <div className="flex items-center mb-4 lg:mb-0">
+          <Image
+            src="/acksession_logo_white.png" // Replace with the path to your logo
+            alt="Company Logo"
+            width={100}
+            height={100}
+          />
+        </div>
+
+        {/* Social Icons */}
+        <div className="flex space-x-4 pb-4">
+          <a href="#" className="text-xl text-white">
+            <FaGithub />
+          </a>
+          <a href="#" className="text-xl text-white">
+            <FaTwitter />
+          </a>
+          <a href="#" className="text-xl text-white">
+            <FaLinkedin />
+          </a>
+          <a href="#" className="text-xl text-white">
+            <FaFacebook />
+          </a>
+          <a href="#" className="text-xl text-white">
+            <FaInstagram />
+          </a>
+        </div>
+      </div>
+      <div className="pt-4 border-t text-center border-gray/40">
+        Copyright &copy; 2023 Acksession Inc. All rights reserved
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
