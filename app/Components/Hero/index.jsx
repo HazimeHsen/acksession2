@@ -17,8 +17,8 @@ const Hero = () => {
         initial="hidden"
         animate={controls}
         variants={{
-          visible: { opacity: 1, y: 0 },
-          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, x: -50 },
         }}
         transition={{ duration: 0.3 }}
         className="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-bold text-primary capitalize max-w-4xl">
@@ -29,8 +29,8 @@ const Hero = () => {
         initial="hidden"
         animate={controls}
         variants={{
-          visible: { opacity: 1, y: 0 },
-          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, x: -50 },
         }}
         transition={{ duration: 0.3, delay: 0.3 }}
         className="text-gray max-w-xl text-sm md:text-lg font-semibold">
@@ -43,8 +43,8 @@ const Hero = () => {
           initial="hidden"
           animate={controls}
           variants={{
-            visible: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: -50 },
           }}
           transition={{ duration: 0.3, delay: 0.6 }}
           className="w-full">
@@ -54,8 +54,8 @@ const Hero = () => {
           initial="hidden"
           animate={controls}
           variants={{
-            visible: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: -50 },
           }}
           transition={{ duration: 0.3, delay: 0.9 }}
           className="w-full">
