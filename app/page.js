@@ -1,3 +1,4 @@
+import Capabilities from "./Components/Capabilities";
 import Hero from "./Components/Hero";
 import History from "./Components/History";
 import Slideshow from "./Components/Slideshow/Slideshow";
@@ -25,6 +26,39 @@ const logos = [
   "/companies/10.webp",
 ];
 
+const capabilities = [
+  {
+    title: "Mobile Application Development",
+    desc: "We specialize in designing and developing feature-rich and high-performance mobile applications for iOS and Android that offer seamless user experiences.",
+    image: "/Capabilities/1.webp",
+  },
+  {
+    title: "Web Application Development​",
+    desc: "With our decade of experience in web designing and development, API integration, and cloud solutions, we can modernize legacy systems and create digital solutions that are market-driven.",
+    image: "/Capabilities/2.webp",
+  },
+  {
+    title: "UI/UX Designing",
+    desc: "We excel at human-centered design through extensive experience in design to ensure that every digital product your brand produces looks and feels impeccable.",
+    image: "/Capabilities/3.webp",
+  },
+  {
+    title: "SEO & Digital Marketing",
+    desc: "Our Digital Marketing Intellectuals helps global enterprises and businesses to reach right audience, increase sales, build fanbase, and dominate the competition through creative campaign, personalized content and 360-degree online reputation management.",
+    image: "/Capabilities/4.webp",
+  },
+  {
+    title: "Hire Dedicated Developers",
+    desc: "Hire expert software developers from our talent pool at competitive prices with flexible hiring options. Our dedicated developers have expertise and experience to provide end-to-end solutions to startups and enterprises for web and mobile applications development.",
+    image: "/Capabilities/5.webp",
+  },
+  {
+    title: "Artificial Intelligence",
+    desc: "Unlock the potential of Artificial Intelligence with our comprehensive AI integration services. From machine learning algorithms to natural language processing, we harness cutting-edge AI technologies to optimize processes, enhance decision-making, and drive innovation for your business.",
+    image: "/Capabilities/6.png",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -35,6 +69,7 @@ export default function Home() {
       />
       <History />
       <WorkedWith logos={logos} />
+      <Capabilities capabilities={capabilities} />
     </>
   );
 }
