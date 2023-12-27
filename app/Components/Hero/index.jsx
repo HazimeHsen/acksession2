@@ -31,7 +31,7 @@ const Hero = () => {
           visible: { opacity: 1, x: 0 },
           hidden: { opacity: 0, x: -50 },
         }}
-        transition={{ duration: 0.3, delay: 0.3 }}
+        transition={{ duration: 1, delay: 0.3 }}
         className="text-gray max-w-xl text-sm md:text-lg font-semibold">
         We specialize in offering comprehensive web and mobile application
         development services to cater to the unique requirements of both budding
@@ -45,7 +45,7 @@ const Hero = () => {
             visible: { opacity: 1, x: 0 },
             hidden: { opacity: 0, x: -50 },
           }}
-          transition={{ duration: 0.3, delay: 0.6 }}
+          transition={{ duration: 1, delay: 0.6 }}
           className="w-full">
           <Button text="Get free quote" Icon={FaArrowRight} />
         </motion.div>
@@ -56,7 +56,7 @@ const Hero = () => {
             visible: { opacity: 1, x: 0 },
             hidden: { opacity: 0, x: -50 },
           }}
-          transition={{ duration: 0.3, delay: 0.9 }}
+          transition={{ duration: 1, delay: 0.9 }}
           className="w-full">
           <Button text="Join Us" outline />
         </motion.div>
