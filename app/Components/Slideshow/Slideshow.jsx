@@ -7,7 +7,7 @@ export default function Slideshow({ images }) {
   return (
     <div className="overflow-hidden pb-10">
       <div className="flex">
-        <div className="ml-4 flex justify-center gap-4 logos-slide-container">
+        <div className="ml-4 flex justify-center z-0 gap-4 logos-slide-container">
           {repeatedImages.map((image, i) => (
             <div key={i} className="logos-slide">
               <div className="w-full">
