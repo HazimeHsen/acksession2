@@ -1,11 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaBars, FaTimes, FaAngleDown } from "react-icons/fa";
 
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showDropdown, setShowDropdown] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
@@ -31,11 +32,36 @@ const Navbar = () => {
         { text: "Service 3", url: "#" },
       ],
     },
+    {
+      text: "prices",
+      url: "#",
+      dropdown: [
+        { text: "Service 1", url: "#" },
+        { text: "Service 2", url: "#" },
+        { text: "Service 3", url: "#" },
+      ],
+    },
     { text: "Contact", url: "#" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const shouldShow = scrollTop > 0;
+      setIsScrolled(shouldShow);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="relative w-screen">
+    <div
+      className={`fixed top-0 transition-all duration-200 w-full ${
+        isScrolled ? "bg-bgWhite shadow-md" : ""
+      }`}>
       <nav className="p-4 md:px-6 lg:px-10">
         <div className="mx-auto flex items-center justify-between">
           <div className="text-white font-bold text-lg">
@@ -105,16 +131,17 @@ const Navbar = () => {
               <FaTimes size={25} />
             </button>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col gap-3 pt-8 items-center w-full">
             {links.map((link, index) => (
               <div
                 key={index}
-                className="relative inline-block group"
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}>
+                className="relative group w-full border-b border-gray/30 flex justify-center"
+                onClick={() =>
+                  showDropdown ? handleMouseLeave() : handleMouseEnter(index)
+                }>
                 <a
                   href={link.url}
-                  className="text-lg font-semibold py-2 px-4 hover:bg-primary hover:text-white transition-all duration-200 cursor-pointer">
+                  className="text-lg w-full justify-center flex items-center gap-2 font-semibold py-2 px-4 rounded-full hover:bg-primary hover:text-white transition-all duration-200 cursor-pointer">
                   {link.text}
                   {link.dropdown && (
                     <span className="ml-1">
