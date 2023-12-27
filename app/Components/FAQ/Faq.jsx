@@ -54,7 +54,7 @@ const Faq = () => {
                   }}
                   transition={{ duration: 0.3 }}
                   key={index}
-                  className={`flex flex-col justify-between w-full px-6 py-4 mb-4 bg-gray-100 border rounded-3xl cursor-pointer`}
+                  className={`flex flex-col justify-between w-full px-6 py-4 mb-4 bg-gray-100 border rounded-lg cursor-pointer`}
                   onClick={() => toggleAnswer(index)}>
                   <div className="flex items-center justify-between">
                     <span className="font-bold">{faq.question}</span>
