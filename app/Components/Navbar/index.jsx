@@ -35,7 +35,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="relative">
+    <div className="relative w-screen">
       <nav className="p-4 md:px-6 lg:px-10">
         <div className="mx-auto flex items-center justify-between">
           <div className="text-white font-bold text-lg">
@@ -97,7 +97,7 @@ const Navbar = () => {
         <div
           className={`${
             showSidebar ? "translate-x-0" : "translate-x-full"
-          } absolute top-0 right-0 z-50 bg-white h-screen w-64 p-4 shadow-xl overflow-y-auto transition-transform duration-300 ease-in-out`}>
+          } fixed top-0 right-0 z-50 bg-white h-screen w-64 p-4 shadow-xl overflow-y-auto transition-transform duration-300 ease-in-out`}>
           <div className="flex justify-end">
             <button
               onClick={toggleSidebar}
