@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "./style.css";
 import useAnimationHook from "@/app/hooks/useAnimation";
 const Heading = ({ children }) => {
   const { controls: controls1, ref: ref1 } = useAnimationHook();

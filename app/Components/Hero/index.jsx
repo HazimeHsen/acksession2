@@ -1,12 +1,18 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Button from "../Button";
 import { FaArrowRight } from "react-icons/fa";
-import { motion } from "framer-motion";
-import useAnimationHook from "@/app/hooks/useAnimation";
+import { motion, useAnimation, useInView } from "framer-motion";
 const Hero = () => {
-  const { controls, ref } = useAnimationHook();
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.2, once: true });
 
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [controls, isInView]);
   return (
     <div className="md:pt-10 flex justify-center items-center h-screen text-center flex-col gap-5 md:gap-10 w-full px-4 md:px-10">
       <motion.div
@@ -17,7 +23,7 @@ const Hero = () => {
           visible: { opacity: 1, y: 0 },
           hidden: { opacity: 0, y: 50 },
         }}
-        transition={{ duration: 0.3, delay: 0.1 }}
+        transition={{ duration: 0.3 }}
         className="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-bold text-primary capitalize max-w-4xl">
         Leading <span className="text-secondary">web & mobile</span> application
         development company
