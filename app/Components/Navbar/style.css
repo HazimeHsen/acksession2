@@ -1,0 +1,50 @@
+/* Hero.css */
+@keyframes fade-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+@keyframes fade-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .fade-in-left {
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: fade-in-left 0.3s ease-out;
+    animation-fill-mode: forwards; /* Retain styles after animation ends */
+  }
+  
+  /* Add delays for each element */
+  .fade-in-left:nth-child(1) {
+    animation-delay: 1.2s;
+  }
+ 
+  .fade-in-right {
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: fade-in-right 0.3s ease-out;
+    animation-fill-mode: forwards; /* Retain styles after animation ends */
+  }
+  
+  /* Add delays for each element */
+  .fade-in-right:nth-child(1) {
+    animation-delay: 1.2s;
+  }
+  
+  .fade-in-right:nth-child(2) {
+    animation-delay: 1.2s;
+  }
+  .fade-in-right:nth-child(3) {
+    animation-delay: 1.2s;
+  }
