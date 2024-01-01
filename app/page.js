@@ -84,18 +84,20 @@ const work = [
 
 export default function Home() {
   return (
-    <ClientOnly>
-      <Hero />
-      {/* <Slideshow
+    <>
+      <div>
+        <Hero />
+        {/* <Slideshow
         className="max-w-[500px] max-h-[300px] w-full h-full "
         images={images}
       /> */}
-      <History />
-      <WhatWeDo />
-      <Capabilities capabilities={capabilities} />
-      {/* <WorkedWith logos={logos} /> */}
-      <Works work={work} />
-      <Faq />
-    </ClientOnly>
+        <History />
+        <WhatWeDo />
+        <Capabilities capabilities={capabilities} />
+        {/* <WorkedWith logos={logos} /> */}
+        <Works work={work} />
+        <Faq />
+      </div>
+    </>
   );
 }
