@@ -16,10 +16,10 @@ const Hero = () => {
         initial="hidden"
         animate={controls}
         variants={{
-          visible: { opacity: 1, x: 0 },
-          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 50 },
         }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.3 }}
         className="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-bold text-primary capitalize max-w-4xl">
         Leading <span className="text-secondary">web & mobile</span> application
         development company
@@ -28,10 +28,10 @@ const Hero = () => {
         initial="hidden"
         animate={controls}
         variants={{
-          visible: { opacity: 1, x: 0 },
-          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 50 },
         }}
-        transition={{ duration: 1, delay: 0.3 }}
+        transition={{ duration: 0.3, delay: 0.3 }}
         className="text-gray max-w-xl text-sm md:text-lg font-semibold">
         We specialize in offering comprehensive web and mobile application
         development services to cater to the unique requirements of both budding
@@ -42,10 +42,10 @@ const Hero = () => {
           initial="hidden"
           animate={controls}
           variants={{
-            visible: { opacity: 1, x: 0 },
-            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: 50 },
           }}
-          transition={{ duration: 1, delay: 0.6 }}
+          transition={{ duration: 0.3, delay: 0.6 }}
           className="w-full">
           <Button text="Get free quote" Icon={FaArrowRight} />
         </motion.div>

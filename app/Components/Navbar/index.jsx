@@ -69,7 +69,7 @@ const Navbar = () => {
               visible: { opacity: 1, x: 0 },
               hidden: { opacity: 0, x: -50 },
             }}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 0.3, delay: 1 }}
             className="text-white font-bold text-lg">
             <Image
               width={150}
@@ -85,7 +85,7 @@ const Navbar = () => {
               visible: { opacity: 1, x: 0 },
               hidden: { opacity: 0, x: 50 },
             }}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 0.3, delay: 1 }}
             className="space-x-4 hidden lg:flex">
             {links.map((link, index) => (
               <div
@@ -126,7 +126,7 @@ const Navbar = () => {
               visible: { opacity: 1, x: 0 },
               hidden: { opacity: 0, x: 50 },
             }}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 0.3, delay: 1 }}
             className="lg:hidden mt-4">
             <button
               onClick={toggleSidebar}
