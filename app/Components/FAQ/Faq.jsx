@@ -63,7 +63,7 @@ const Faq = () => {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      className={`${
+                      className={`transition-transform duration-300 ${
                         selectedQuestion === index ? "rotate-180" : ""
                       } text-blue-600`}
                       viewBox="0 0 16 16">
