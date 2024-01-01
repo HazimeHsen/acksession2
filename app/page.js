@@ -5,6 +5,7 @@ import Faq from "./Components/FAQ/Faq";
 import Hero from "./Components/Hero";
 import History from "./Components/History";
 import Slideshow from "./Components/Slideshow/Slideshow";
+import WhatWeDo from "./Components/WhatWeDo/WhatWeDo";
 import WorkedWith from "./Components/WorkedWith";
 import Works from "./Components/Works";
 
@@ -90,6 +91,7 @@ export default function Home() {
         images={images}
       /> */}
       <History />
+      <WhatWeDo />
       <Capabilities capabilities={capabilities} />
       {/* <WorkedWith logos={logos} /> */}
       <Works work={work} />
