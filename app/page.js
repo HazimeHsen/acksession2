@@ -1,6 +1,5 @@
 "use client";
 import Capabilities from "./Components/Capabilities";
-import ClientOnly from "./Components/ClientOnly";
 import Faq from "./Components/FAQ/Faq";
 import Hero from "./Components/Hero";
 import History from "./Components/History";

@@ -3,7 +3,6 @@ import useAnimationHook from "@/app/hooks/useAnimation";
 import React, { useState } from "react";
 import Heading from "../Heading";
 import { motion } from "framer-motion";
-import ClientOnly from "../ClientOnly";
 const Faq = () => {
   const [selectedQuestion, setSelectedQuestion] = useState(null);
 
