@@ -1,6 +1,7 @@
 "use client";
 import Capabilities from "./Components/Capabilities";
 import ClientOnly from "./Components/ClientOnly";
+import Location from "./Components/Contact";
 import Faq from "./Components/FAQ/Faq";
 import Hero from "./Components/Hero";
 import History from "./Components/History";
@@ -92,6 +93,7 @@ export default function Home() {
         <Capabilities capabilities={capabilities} />
         <Works work={work} />
         <Faq />
+        <Location />
       </div>
     </ClientOnly>
   );
