@@ -127,7 +127,7 @@ const ExperienceCard = ({ experience, index }) => {
           index % 2 === 0 && !isMobile ? slideAnimation : slideFromRight
         }
         transition={{ duration: 0.5 }}
-        className="bg-slate-200 ring-gray-600 ring-2 sm:w-64 ml-16 sm:ml-0 md:w-80 px-4 py-2 rounded-md relative">
+        className="bg-slate-200 ring-primary ring-2 sm:w-64 ml-16 sm:ml-0 md:w-80 px-4 py-2 rounded-md relative">
         {index % 2 === 0 && (
           <div className="absolute right-[99%] sm:!-right-4 top-1/2 transform -translate-y-1/2">
             {/* Arrow for even index (on the left) */}
