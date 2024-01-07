@@ -2,10 +2,12 @@
 import Capabilities from "./Components/Capabilities";
 import ClientOnly from "./Components/ClientOnly";
 import Location from "./Components/Contact";
+import ExperienceSection from "./Components/Experience";
 import Faq from "./Components/FAQ/Faq";
 import Hero from "./Components/Hero";
 import History from "./Components/History";
 import Slideshow from "./Components/Slideshow/Slideshow";
+import Testimonial from "./Components/Testemonials";
 import WhatWeDo from "./Components/WhatWeDo/WhatWeDo";
 import WorkedWith from "./Components/WorkedWith";
 import Works from "./Components/Works";
@@ -92,6 +94,10 @@ export default function Home() {
         <WhatWeDo />
         <Capabilities capabilities={capabilities} />
         <Works work={work} />
+        <div className="px-6">
+          <ExperienceSection />
+        </div>
+        <Testimonial />
         <Faq />
         <Location />
       </div>

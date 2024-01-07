@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Add this to your existing stylesheet or create a new one */
+.testimonial-item {
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateY(20px); /* Optional: You can add a slight translateY for a subtle upward motion */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transition for opacity and transform properties */
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .arrow-left,
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.arrow-left {
+    border-width: 10px 20px 10px 0;
+    border-color: transparent #E2E8F0 transparent transparent;
+  
+    @media (min-width: 640px) {
+      border-width: 10px 0 10px 20px;
+      border-color: transparent transparent transparent #E2E8F0;
+    }
+  }
+  
+  .arrow-right {
+    border-width: 10px 20px 10px 0;
+    border-color: transparent #E2E8F0 transparent transparent;
+  }
+  
