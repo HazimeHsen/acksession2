@@ -22,17 +22,18 @@ const Navbar = () => {
   };
 
   const links = [
-    { text: "Home", url: "#" },
-    { text: "About", url: "#" },
+    { text: "Home", url: "/" },
+    { text: "Expertise", url: "/#Expertise" },
     {
       text: "Services",
-      url: "#",
+      url: "/#Services",
     },
     {
-      text: "prices",
-      url: "#",
+      text: "Testimonials",
+      url: "/#Testimonials",
     },
-    { text: "Contact", url: "#" },
+    { text: "FAQ", url: "/#FAQ" },
+    { text: "Contact", url: "/#Contact" },
   ];
 
   useEffect(() => {
@@ -132,6 +133,7 @@ const Navbar = () => {
                     showDropdown ? handleMouseLeave() : handleMouseEnter(index)
                   }>
                   <a
+                    onClick={toggleSidebar}
                     href={link.url}
                     className="text-lg w-full justify-center flex items-center gap-2 font-semibold py-2 px-4 rounded-full hover:bg-primary hover:text-white transition-all duration-200 cursor-pointer">
                     {link.text}

@@ -6,7 +6,7 @@ import useAnimationHook from "@/app/hooks/useAnimation";
 import { motion } from "framer-motion";
 const Capabilities = ({ capabilities }) => {
   return (
-    <div className="py-20 px-4 md:px-8">
+    <div id="Services" className="py-20 px-4 md:px-8">
       <div>
         <Heading>
           <div className="text-4xl font-bold text-center md:text-5xl">

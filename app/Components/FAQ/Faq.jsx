@@ -33,7 +33,7 @@ const Faq = () => {
 
   return (
     <>
-      <section className="flex items-center">
+      <section id="FAQ" className="flex items-center">
         <div className="justify-center flex-1 max-w-6xl px-4 py-4 mx-auto lg:py-6 md:px-6">
           <Heading>
             <div className="pb-2 text-pretty text-4xl mb-10 font-bold text-center text-gray-800 md:text-5xl">

@@ -37,7 +37,7 @@ const WhatWeDo = () => {
 
   return (
     <motion.div
-      id="ourwork"
+      id="Expertise"
       ref={ref}
       initial="hidden"
       animate={controls}

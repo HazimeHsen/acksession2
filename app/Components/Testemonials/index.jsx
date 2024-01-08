@@ -94,7 +94,9 @@ const Testemonials = () => {
   };
 
   return (
-    <div className="relative overflow-hidden md:mx-10 my-20 mx-4">
+    <div
+      id="Testimonials"
+      className="relative overflow-hidden md:mx-10 my-20 mx-4">
       <Heading>
         <div className="text-4xl font-bold text-center mb-10 md:text-5xl">
           Testimon<span className="text-primary underline">ials</span>

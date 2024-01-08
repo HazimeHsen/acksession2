@@ -13,7 +13,7 @@ const Location = () => {
     <Animation
       animationType="fade-bottom"
       className="text-gray-600 md:mb-0 my-10 body-font relative">
-      <div className="flex items-center px-5 flex-wrap-reverse">
+      <div id="Contact" className="flex items-center px-5 flex-wrap-reverse">
         <iframe
           width="100%"
           height="100%"
