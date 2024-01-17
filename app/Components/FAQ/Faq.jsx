@@ -13,9 +13,9 @@ const Faq = () => {
 
   const faqData = [
     {
-      question: "What is website?",
+      question: "What services do you offer",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        " Comprehensive Services, Agile Approach:  Web & Mobile Development: Crafting functional websites and apps. Software Solutions: Turning ideas into efficient programs. UI/UX Design: Creating appealing, user-friendly interfaces. Product Development: Bringing new concepts to life. Quality Assurance: Rigorous testing for reliable performance. Cloud Services: Securely managing and storing your data. Support & Maintenance: Prompt assistance for issue resolution. Consulting & Strategy: Offering insights and planning for projects. Our Agile Approach:  We emphasize collaboration and transparency with an agile methodology, utilizing practices like continuous testing to deliver cost-effective, high-quality results, ensuring thorough attention for optimal project outcomes. ",
     },
     {
       question: "What is the profit do you earn?",

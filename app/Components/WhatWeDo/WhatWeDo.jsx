@@ -51,15 +51,12 @@ const WhatWeDo = () => {
         <div className="w-full flex justify-center mt-10 py-5">
           <div className="w-full">
             <h1 className="font-bold text-center text-4xl mb-4">
-              Our
-              <span className="text-primary underline ml-2">Expertise</span>
+              Why
+              <span className="text-primary underline ml-2">Choose Us?</span>
             </h1>
             <p
               className={`text-center max-w-lg mx-auto text-sm text-gray-600 mb-5`}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
-              molestias officia assumenda, enim corrupti minima ut doloribus
-              alias quisquam sit explicabo voluptas inventore, animi, cum
-              delectus neque eos culpa nesciunt!
+              
             </p>
             <div className="flex justify-center">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">

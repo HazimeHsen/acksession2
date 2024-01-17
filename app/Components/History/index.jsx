@@ -12,7 +12,7 @@ const data = [
   },
   {
     id: 2,
-    nb: 320,
+    nb: 100,
     icon: "+",
     desc: "Successful Projects",
   },
@@ -24,7 +24,7 @@ const data = [
   },
   {
     id: 4,
-    nb: 99,
+    nb: 100,
     icon: "%",
     desc: "Customer Satisfaction",
   },
@@ -51,7 +51,7 @@ const History = () => {
               transition={{ duration: 0.3 }}
               className="text-4xl md:text-5xl font-bold ">
               <span className="text-third mr-2">Trusted</span>
-              by more than 140
+              by more than 100
               <span className="text-third mx-2">businesses</span>
               and their
               <span className="text-third ml-2">teams.</span>
