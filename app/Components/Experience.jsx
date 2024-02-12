@@ -118,7 +118,7 @@ const ExperienceCard = ({ experience, index }) => {
         variants={iconAnimation}
         transition={{ duration: 0.5, delay: 0.2 }}
         className="flex absolute sm:mx-auto -ml-5 inset-0 ring-4 ring-primary my-auto items-center transform -translate-y-1/2 justify-center w-10 h-10 rounded-full font-semibold text-lg bg-bgWhite text-black shadow md:order-1">
-        {index}
+        {index + 1}
       </motion.div>
       <motion.div
         initial="hidden"

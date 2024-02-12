@@ -10,7 +10,7 @@ const Works = ({ work }) => {
   const { controls: controls3, ref: ref3 } = useAnimationHook();
 
   return (
-    <div className="my-20 bg-primary px-4 h-[120vh] md:h-fit md:px-10 text-white py-14">
+    <div className="mb-20 bg-primary px-4 h-[120vh] md:h-fit md:px-10 text-white py-14">
       <div>
         <motion.div
           ref={ref1}

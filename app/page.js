@@ -1,4 +1,5 @@
 "use client";
+import Bg from "./Components/Bg/BgAnimation";
 import Capabilities from "./Components/Capabilities";
 import ClientOnly from "./Components/ClientOnly";
 import Location from "./Components/Contact";
@@ -91,16 +92,28 @@ export default function Home() {
       <div>
         <Hero />
         <History />
-        <WhatWeDo />
-        <Capabilities capabilities={capabilities} />
-        <Works work={work} />
-        <div className="px-6">
-          <ExperienceSection />
+        <div className="relative">
+          <Bg />
+          <WhatWeDo />
         </div>
-        <Testimonial />
-        <Faq />
-        <Location />
+        <div className="relative">
+          <Bg />
+          <Capabilities capabilities={capabilities} />
+        </div>
+        <Works work={work} />
+        <div className="px-6 relative">
+          <ExperienceSection />
+          <Testimonial />
+          <Bg />
+        </div>
+
+        <div className="relative">
+          <Faq />
+          <Location />
+          <Bg />
+        </div>
       </div>
+      <Bg />
     </ClientOnly>
   );
 }

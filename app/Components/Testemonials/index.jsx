@@ -115,6 +115,7 @@ const Testemonials = () => {
           key={currentIndex}
           custom={currentIndex}
           variants={variants}
+          transition={{ duration: 0.5 }}
           initial="enter"
           animate="center"
           exit="exit"
