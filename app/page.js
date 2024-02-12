@@ -95,9 +95,6 @@ export default function Home() {
         <div className="relative">
           <Bg />
           <WhatWeDo />
-        </div>
-        <div className="relative">
-          <Bg />
           <Capabilities capabilities={capabilities} />
         </div>
         <Works work={work} />
